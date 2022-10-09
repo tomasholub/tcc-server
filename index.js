@@ -1,6 +1,9 @@
+const cors = require('cors');
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 80;
+
+app.use(cors());
 
 app.get('/', (req, res) => res.json({ number: 1 }));
 
